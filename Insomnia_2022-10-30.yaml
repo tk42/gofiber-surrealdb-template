@@ -1,0 +1,173 @@
+_type: export
+__export_format: 4
+__export_date: 2022-10-30T06:00:48.275Z
+__export_source: insomnia.desktop.app:v2022.6.0
+resources:
+  - _id: req_cc529589a5ad422ea262cc96d246591a
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667109583398
+    created: 1667102779405
+    url: http://localhost:8080/api/books
+    name: /api/book
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"Title": "The Tale of Genji",
+        	"Author": "Murasaki Shikibu"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: true
+      username: ""
+      password: ""
+    metaSortKey: -1667102779405
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_255136867a7e44b7bd8227b612e09ec7
+    parentId: null
+    modified: 1667102779393
+    created: 1667102779393
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_715c3f835a3f4f43a3f204628c4a9d83
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667107285563
+    created: 1667107249570
+    url: http://localhost:8080/api/books
+    name: /api/books
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: true
+      username: ""
+      password: ""
+    metaSortKey: -1667102779355
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1141c05837704fbf9ff0e98bc8d33721
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667109611103
+    created: 1667107306808
+    url: http://localhost:8080/api/books
+    name: /api/books
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "z16bd30dlhu8b5tfql71",
+        	"title": "源氏物語",
+        	"author": "紫式部"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: true
+      username: ""
+      password: ""
+    metaSortKey: -1667102779305
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_061d1d5dcd2a467f9bbc22ac2e68df52
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667109616079
+    created: 1667107392119
+    url: http://localhost:8080/api/books
+    name: /api/books
+    description: ""
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "z16bd30dlhu8b5tfql71"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: true
+      username: ""
+      password: ""
+    metaSortKey: -1667102779255
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_395fc8ae68a7e8355219b50fd8d6dab2ba2b783f
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667102779402
+    created: 1667102779402
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1667102779402
+    _type: environment
+  - _id: jar_395fc8ae68a7e8355219b50fd8d6dab2ba2b783f
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667102779403
+    created: 1667102779403
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_decc8caa1bf346668ff5cca0767701df
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667107428881
+    created: 1667102779400
+    fileName: gofiber-surrealdb-template
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_d2f788693aa9422e8e62bc548e9db6bf
+    parentId: wrk_255136867a7e44b7bd8227b612e09ec7
+    modified: 1667102779405
+    created: 1667102779405
+    name: Example Test Suite
+    _type: unit_test_suite

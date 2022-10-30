@@ -1,0 +1,19 @@
+services:
+  server:
+    image: golang:latest
+    volumes:
+      - .:/home
+    environment:
+      - SURREALDB_URL=ws://surrealdb:8000/rpc
+      - SURREALDB_USER=root
+      - SURREALDB_PASS=root
+    ports:
+      - "8080:8080"
+    working_dir: /home
+    command: ["go", "run", "main.go"]
+
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    ports:
+      - "8000:8000"
+    command: ["start", "--user", "root", "--pass", "root", "memory"]
