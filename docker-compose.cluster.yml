@@ -10,14 +10,21 @@ services:
     ports:
       - "8080:8080"
     working_dir: /home
-    command: "go run main.go"
+    command: ["go", "run", "main.go"]
     depends_on:
       - surrealdb
+      - tikv
+
+  tikv:
+    build: .
+    ports:
+      - "2379:2379"
+    command: tiup playground
 
   surrealdb:
     image: surrealdb/surrealdb:latest
     ports:
       - "8000:8000"
-    command: "start --user root --pass root file://database.db"
-    volumes:
-      - ./database.db:/database.db
+    command: "start --user root --pass root tikv://tikv:2379"
+    depends_on:
+      - tikv

@@ -18,6 +18,4 @@ services:
     image: surrealdb/surrealdb:latest
     ports:
       - "8000:8000"
-    command: "start --user root --pass root file://database.db"
-    volumes:
-      - ./database.db:/database.db
+    command: "start --user root --pass root memory"
