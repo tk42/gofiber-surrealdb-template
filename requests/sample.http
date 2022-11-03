@@ -1,0 +1,15 @@
+POST http://localhost:8000/sql HTTP/1.1
+Authorization: Basic root:root
+Content-Type: text/plain
+Accept: application/json
+NS: ns
+DB: books
+
+INFO FOR DB;
+###
+GET http://localhost:8080/api/books HTTP/1.1
+Authorization: Basic root:root
+Content-Type: text/plain
+Accept: application/json
+NS: ns
+DB: books
